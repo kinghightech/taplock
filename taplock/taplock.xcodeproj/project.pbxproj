@@ -6,14 +6,70 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0E9A10012FF2A00000100001 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9A10052FF2A00000100005 /* ManagedSettings.framework */; };
+		0E9A10022FF2A00000100002 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9A10062FF2A00000100006 /* ManagedSettingsUI.framework */; };
+		0E9A10032FF2A00000100003 /* TapLockShield.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0E9A10042FF2A00000100004 /* TapLockShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E9A10072FF2A00000100007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E04F3552FF16BE000452EFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9A100C2FF2A0000010000C;
+			remoteInfo = TapLockShield;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E9A10082FF2A00000100008 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0E9A10032FF2A00000100003 /* TapLockShield.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E04F35D2FF16BE000452EFD /* taplock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taplock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9A10042FF2A00000100004 /* TapLockShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TapLockShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9A10052FF2A00000100005 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		0E9A10062FF2A00000100006 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0E9A10092FF2A00000100009 /* Exceptions for "TapLockShield" folder in "TapLockShield" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				TapLockShield.entitlements,
+			);
+			target = 0E9A100C2FF2A0000010000C /* TapLockShield */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0E04F35F2FF16BE000452EFD /* taplock */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = taplock;
+			sourceTree = "<group>";
+		};
+		0E9A100A2FF2A0000010000A /* TapLockShield */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0E9A10092FF2A00000100009 /* Exceptions for "TapLockShield" folder in "TapLockShield" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = TapLockShield;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +82,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E9A100B2FF2A0000010000B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E9A10022FF2A00000100002 /* ManagedSettingsUI.framework in Frameworks */,
+				0E9A10012FF2A00000100001 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,7 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				0E04F35F2FF16BE000452EFD /* taplock */,
+				0E9A100A2FF2A0000010000A /* TapLockShield */,
 				0E04F35E2FF16BE000452EFD /* Products */,
+				0E9A10132FF2A00000100013 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +108,18 @@
 			isa = PBXGroup;
 			children = (
 				0E04F35D2FF16BE000452EFD /* taplock.app */,
+				0E9A10042FF2A00000100004 /* TapLockShield.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0E9A10132FF2A00000100013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E9A10052FF2A00000100005 /* ManagedSettings.framework */,
+				0E9A10062FF2A00000100006 /* ManagedSettingsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +132,12 @@
 				0E04F3592FF16BE000452EFD /* Sources */,
 				0E04F35A2FF16BE000452EFD /* Frameworks */,
 				0E04F35B2FF16BE000452EFD /* Resources */,
+				0E9A10082FF2A00000100008 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E9A100F2FF2A0000010000F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0E04F35F2FF16BE000452EFD /* taplock */,
@@ -69,6 +148,28 @@
 			productName = taplock;
 			productReference = 0E04F35D2FF16BE000452EFD /* taplock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0E9A100C2FF2A0000010000C /* TapLockShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E9A10122FF2A00000100012 /* Build configuration list for PBXNativeTarget "TapLockShield" */;
+			buildPhases = (
+				0E9A100E2FF2A0000010000E /* Sources */,
+				0E9A100B2FF2A0000010000B /* Frameworks */,
+				0E9A100D2FF2A0000010000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0E9A100A2FF2A0000010000A /* TapLockShield */,
+			);
+			name = TapLockShield;
+			packageProductDependencies = (
+			);
+			productName = TapLockShield;
+			productReference = 0E9A10042FF2A00000100004 /* TapLockShield.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -82,6 +183,10 @@
 				TargetAttributes = {
 					0E04F35C2FF16BE000452EFD = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					0E9A100C2FF2A0000010000C = {
+						CreatedOnToolsVersion = 26.6;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -100,12 +205,20 @@
 			projectRoot = "";
 			targets = (
 				0E04F35C2FF16BE000452EFD /* taplock */,
+				0E9A100C2FF2A0000010000C /* TapLockShield */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0E04F35B2FF16BE000452EFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E9A100D2FF2A0000010000D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +235,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E9A100E2FF2A0000010000E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E9A100F2FF2A0000010000F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E9A100C2FF2A0000010000C /* TapLockShield */;
+			targetProxy = 0E9A10072FF2A00000100007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E04F3662FF16BE100452EFD /* Debug */ = {
@@ -260,6 +388,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "TapLock uses NFC to verify your physical card before locking or unlocking selected apps.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +422,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "TapLock uses NFC to verify your physical card before locking or unlocking selected apps.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +435,76 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0E9A10102FF2A00000100010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = TapLockShield/TapLockShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KZRTRUU4S7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapLockShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TapLockShield;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aahish.taplock.TapLockShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E9A10112FF2A00000100011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = TapLockShield/TapLockShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KZRTRUU4S7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapLockShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TapLockShield;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aahish.taplock.TapLockShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,6 +529,15 @@
 			buildConfigurations = (
 				0E04F3692FF16BE100452EFD /* Debug */,
 				0E04F36A2FF16BE100452EFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E9A10122FF2A00000100012 /* Build configuration list for PBXNativeTarget "TapLockShield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E9A10102FF2A00000100010 /* Debug */,
+				0E9A10112FF2A00000100011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
